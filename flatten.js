@@ -25,18 +25,17 @@ const assertArraysEqual = function(actualArr, expectedArr) {
 };
 
 //// implemented with recursion
-const flatten = function(arr){
+const flatten = function(arr) {
   let flatArr = [];
-  for(let i = 0; i < arr.length; i++){
-    if(Array.isArray(arr[i])){
+  for (let i = 0; i < arr.length; i++) {
+    if (Array.isArray(arr[i])) {
       flatArr = flatArr.concat(flatten(arr[i]));
-    }
-    else{
+    } else {
       flatArr.push(arr[i]);
     }
   }
   return flatArr;
-}
+};
 
 
 assertArraysEqual(flatten([1, 2, [3, [4, [5, 6]]], 7]), [1, 2, 3, 4, 5 , 6, 7]);
