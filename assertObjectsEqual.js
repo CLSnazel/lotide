@@ -1,3 +1,5 @@
+//const { type } = require('os');
+
 const eqArrays = function(actualArr, expectedArr) {
   //arrays not the same size, return false
   if (actualArr.length !== expectedArr.length) {
@@ -24,22 +26,22 @@ const eqObjects = function(obj1, obj2) {
   if (allKeys1.length !== allKeys2.length) {
     return false;
   }
-  for (let i = 0; i < allKeys1.length; i++) {
-    if (!obj2[allKeys1[i]]) {
+
+  for (let val in obj1) {
+    if (!obj2[val]) {
       return false;
-    }
-    if (Array.isArray(obj1[allKeys1[i]])) {
-      let arrayResult = eqArrays(obj1[allKeys1[i]], obj2[allKeys1[i]]);
+    } else if (Array.isArray(obj1[val]) && Array.isArray(obj2[val])) {
+      let arrayResult = eqArrays(obj1[val], obj2[val]);
       if (!arrayResult) {
         return false;
       }
-    } else if (typeof(obj1[allKeys1[i]]) === 'object' && typeof(obj2[allKeys1[i]]) === 'object') {
-      let objectResult = eqObjects(obj1[allKeys1[i]], obj2[allKeys1[i]]);
+    } else if (typeof(obj1[val]) === 'object' && typeof(obj2[val]) === 'object') {
+      let objectResult = eqObjects(obj1[val], obj2[val]);
       if (!objectResult) {
         return false;
       }
     } else {
-      if (obj2[allKeys1[i]] !== obj1[allKeys1[i]]) {
+      if (obj1[val] !== obj2[val]) {
         return false;
       }
     }
