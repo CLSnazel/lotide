@@ -14,7 +14,12 @@ const eqArrays = function(actualArr, expectedArr) {
 
   for (let i = 0; i < actualArr.length; i++) {
     //items at index i do not match, return false
-    if (actualArr[i] !== expectedArr[i]) {
+    if (Array.isArray(actualArr[i]) && Array.isArray(expectedArr[i])) {
+      let result = eqArrays(actualArr[i], expectedArr[i]);
+      if (!result) {
+        return false;
+      }
+    } else if (actualArr[i] !== expectedArr[i]) {
       return false;
     }
   }
@@ -63,8 +68,8 @@ assertEqual(eqObjects(ab,ba), true);
 const abc = {"a":"1", "b":"2", "c":"3"};
 assertEqual(eqObjects(ab, abc), false);
 
-const cd = {c: "1", d: ["2", 3]};
-const dc = {d: ["2", 3], c:'1'};
+const cd = {c: "1", d: ["2", 3, [3, 4, [5, 6]]]};
+const dc = {d: ["2", 3, [3, 4, [5, 6]]], c:'1'};
 assertEqual(eqObjects(cd,dc), true);
 
 const cd2 = {c: "1", d:["2", 3, 4]};
