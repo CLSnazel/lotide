@@ -61,6 +61,8 @@ const eqObjects = function(obj1, obj2) {
   return true;
 };
 
+
+//TODO: make test file
 const ab = {"a":"1", "b":"2"};
 const ba = {"b":"2", "a":"1"};
 assertEqual(eqObjects(ab,ba), true);
@@ -81,3 +83,5 @@ assertEqual(eqObjects(objIn1, objIn2), true);
 
 const objIn3 = {h:'h', j:{k:'k', lol:'rofl'}};
 assertEqual(eqObjects(objIn1, objIn3), false);
+
+module.exports = eqObjects;

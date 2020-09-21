@@ -17,7 +17,7 @@ const findKey = (obj, callback) => {
 };
 
 
-
+//TODO: send to test file
 const constellations = {
   "Blue Hill": {stars: 1},
   "Akaleri": {stars: 3},
@@ -127,3 +127,5 @@ assertEqual(findKey(constellations, x => x.stars === 2), 'noma');
 
 assertEqual(findKey(horoscopes, isCurrHoroscope), "Virgo"); //as of Sept 17
 assertEqual(findKey(horoscopes, item => item.element === 'water'), 'Pisces');
+
+module.exports = findKey;

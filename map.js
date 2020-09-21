@@ -32,6 +32,7 @@ const map = (arr, callback) => {
   return results;
 };
 
+//TODO: write test file
 const words = ["ground", "control", "to", "major", "tom"];
 
 const results1 = map(words, word => word[0]);
@@ -39,5 +40,7 @@ const results1 = map(words, word => word[0]);
 assertArraysEqual(results1, ['g', 'c', 't', 'm', 't']);
 assertArraysEqual(map(words, word => word[word.length - 1]), ['d', 'l', 'o', 'r', 'm']);
 assertArraysEqual(map(words, word => word[Math.floor(word.length / 2)]), ['u', 't', 'o', 'j', 'o']);
+
+module.exports = map;
 
 

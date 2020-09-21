@@ -37,6 +37,8 @@ const flatten = function(arr) {
   return flatArr;
 };
 
-
+//TODO: write test file
 assertArraysEqual(flatten([1, 2, [3, [4, [5, 6]]], 7]), [1, 2, 3, 4, 5 , 6, 7]);
 assertArraysEqual(flatten(["lvl1", 'lvl1', ['lvl2', 'lvl2', ['lvl3', 'lvl3', ['lvl4']]],'lvl1', ['lvl2', 'lvl2']]), ['lvl1', 'lvl1', 'lvl2', 'lvl2', 'lvl3', 'lvl3', 'lvl4', 'lvl1', 'lvl2', 'lvl2']);
+
+module.exports = flatten;

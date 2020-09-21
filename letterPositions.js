@@ -41,6 +41,8 @@ const assertArraysEqual = function(actualArr, expectedArr) {
   }
 };
 
+
+//TODO: write test file
 const result1 = letterPositions('hello');
 
 assertArraysEqual(result1['l'], [2,3]);
@@ -59,3 +61,4 @@ assertArraysEqual(lighthouseInHouseResults['s'], lighthouseInHouseExpected['s'])
 assertArraysEqual(lighthouseInHouseResults['e'], lighthouseInHouseExpected['e']);
 assertArraysEqual(lighthouseInHouseResults['n'], lighthouseInHouseExpected['n']);
 
+module.exports = letterPositions;

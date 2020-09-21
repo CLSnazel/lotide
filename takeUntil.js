@@ -39,7 +39,7 @@ const takeUntil = (arr, callback) => {
   return result;
 };
 
-
+//TODO: write test file
 const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
 const results1 = takeUntil(data1, item => item < 0);
 assertArraysEqual(results1, [1,2,5,7,2]);
@@ -48,3 +48,5 @@ assertArraysEqual(results1, [1,2,5,7,2]);
 const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood", ",", "I", 'crossed', 'the', 'ocean', 'for', 'a', 'heart', 'of', 'gold'];
 const results2 = takeUntil(data2, word => word === "I");
 assertArraysEqual(results2, ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood", ","]);
+
+module.exports = takeUntil;

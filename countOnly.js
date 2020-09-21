@@ -28,6 +28,8 @@ const countOnly = function(arr, countObj) {
 };
 
 
+
+//TODO: turn into test file, write better tests
 const firstNames = [
   'Karl',
   'Salima',
@@ -46,3 +48,5 @@ assertEqual(result1['Jason'], 1);
 assertEqual(result1['Karima'], undefined);
 assertEqual(result1['Fang'], 2);
 assertEqual(result1["Agouhanna"], undefined);
+
+module.exports = countOnly;

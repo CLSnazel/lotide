@@ -39,10 +39,11 @@ const without = function(initArr, removeArr) {
   }
   return initArr;
 };
-
+//TODO: write test array
 assertArraysEqual(without([1, 2, 3], [1]), [2, 3]);
 assertArraysEqual(without(["1", "2", "3"], [1, 2, '3']), ["1", "2"]);
 const words = ["hello", 'world', 'lighthouse'];
 without(words, 'lighthouse');
 assertArraysEqual(words, ["hello", 'world', 'lighthouse']);
 
+module.exports = without;
