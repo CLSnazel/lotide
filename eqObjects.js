@@ -61,7 +61,7 @@ const eqObjects = function(obj1, obj2) {
   return true;
 };
 
-
+console.log('eqObjects:');
 //TODO: make test file
 const ab = {"a":"1", "b":"2"};
 const ba = {"b":"2", "a":"1"};
