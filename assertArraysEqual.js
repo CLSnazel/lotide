@@ -1,23 +1,23 @@
 
 //// from eqArrays.js
 // TODO: refactor eqArrays
-const eqArrays = function(actualArr, expectedArr) {
-  //arrays not the same size, return false
-  if (actualArr.length !== expectedArr.length) {
-    return false;
-  }
+// const eqArrays = function(actualArr, expectedArr) {
+//   //arrays not the same size, return false
+//   if (actualArr.length !== expectedArr.length) {
+//     return false;
+//   }
 
-  for (let i = 0; i < actualArr.length; i++) {
-    //items at index i do not match, return false
-    if (actualArr[i] !== expectedArr[i]) {
-      return false;
-    }
-  }
+//   for (let i = 0; i < actualArr.length; i++) {
+//     //items at index i do not match, return false
+//     if (actualArr[i] !== expectedArr[i]) {
+//       return false;
+//     }
+//   }
 
-  //if we get here, it passes
-  return true;
-};
-
+//   //if we get here, it passes
+//   return true;
+// };
+const eqArrays = require('./eqArrays');
 //// from tail.js. I didn't realize that I was actually working ahead making this!
 //// kind of like a combination of the functions above and below....
 // const assertArrayEqual = function(actualArr, expectedArr) {
