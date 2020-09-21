@@ -1,5 +1,6 @@
 
 //// from eqArrays.js
+// TODO: refactor eqArrays
 const eqArrays = function(actualArr, expectedArr) {
   //arrays not the same size, return false
   if (actualArr.length !== expectedArr.length) {
@@ -42,7 +43,10 @@ const assertArraysEqual = function(actualArr, expectedArr) {
   }
 };
 
-assertArraysEqual([1,2,3], [1,2,3]);
-assertArraysEqual([1,2,3], [1,2]);
-assertArraysEqual([1,2,3], [1,2,4]);
-assertArraysEqual([1,2,3], [4,2,3]);
+//TODO: refactor tests
+// assertArraysEqual([1,2,3], [1,2,3]);
+// assertArraysEqual([1,2,3], [1,2]);
+// assertArraysEqual([1,2,3], [1,2,4]);
+// assertArraysEqual([1,2,3], [4,2,3]);
+
+module.exports = assertArraysEqual;
