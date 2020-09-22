@@ -1,4 +1,4 @@
-const assertObjectsEqual = require('../index').assertObjectsEqual;
+const assertObjectsEqual = require('./assertObjectsEqual');
 
 //TODO: write test files
 describe('assertObjectsEqual tests:', () => {

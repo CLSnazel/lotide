@@ -1,3 +1,6 @@
+//const eqObjects = require('./eqObjects');
+
+
 const eqArrays = function(actualArr, expectedArr) {
   //arrays not the same size, return false
   if (actualArr.length !== expectedArr.length) {
@@ -11,6 +14,11 @@ const eqArrays = function(actualArr, expectedArr) {
       if (!result) {
         return false;
       }
+    } else if (typeof(actualArr[i]) === 'object' && typeof(expectedArr[i]) === 'object') {
+      let result = eqObjects(actualArr[i], expectedArr[i]);
+      if (!result) {
+        return false;
+      }
     } else if (actualArr[i] !== expectedArr[i]) {
       return false;
     }
@@ -19,4 +27,5 @@ const eqArrays = function(actualArr, expectedArr) {
   return true;
 };
 
-module.exports = eqArrays;
+module.exports = {eqArrays};
+const eqObjects = require('./index').eqObjects;

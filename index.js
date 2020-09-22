@@ -1,11 +1,14 @@
 // index.js
-const assertArraysEqual = require('./assertArraysEqual');
-const assertEqual = require('./assertEqual');
-const assertObjectsEqual = require('./assertObjectsEqual');
+// const assertArraysEqual = require('./test/assertArraysEqual');
+// const assertEqual = require('./assertEqual');
+// const assertObjectsEqual = require('./assertObjectsEqual');
 const countLetters = require('./countLetters');
 const countOnly = require('./countOnly');
-const eqArrays = require('./eqArrays');
-const eqObjects = require('./eqObjects');
+// const eqArrays = require('./eqArrays').eqArrays;
+// const eqObjects = require('./eqObjects').eqObjects;
+const eqArrays = require('./eqRefTypes').eqArrays;
+const eqObjects = require('./eqRefTypes').eqObjects;
+//const eqRefTypes = require('./eqRefTypes');
 const findKey = require('./findKey');
 const findKeyByValue = require('./findKeyByValue');
 const flatten = require('./flatten');
@@ -18,9 +21,9 @@ const takeUntil = require('./takeUntil');
 const without = require('./without');
 
 module.exports = {
-  assertArraysEqual,
-  assertEqual,
-  assertObjectsEqual,
+  // assertArraysEqual,
+  // assertEqual,
+  // assertObjectsEqual,
   countLetters,
   countOnly,
   eqArrays,

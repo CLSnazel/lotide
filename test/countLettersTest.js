@@ -1,5 +1,3 @@
-const assertArraysEqual = require('../assertArraysEqual');
-
 const countLetters = require('../index').countLetters;
 const assert = require('chai').assert;
 
