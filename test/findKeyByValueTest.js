@@ -18,16 +18,5 @@ describe('findKeybyValue() test:', () => {
     assert.equal(findKeyByValue(testObj1, "jubilee"), undefined);
   });
   
-})
+});
 
-// //TODO: write test file
-// 
-
-// assertEqual();
-// assertEqual(findKeyByValue(testObj1, 2), "hello");
-// assertEqual();
-
-
-
-// assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
-// assertEqual();
