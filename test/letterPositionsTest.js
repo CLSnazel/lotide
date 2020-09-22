@@ -13,5 +13,5 @@ describe('letterPositions() test:', () => {
   });
   it('should return empty when given a string of only spaces', () => {
     assert.deepEqual(letterPositions("    "), {});
-  })
+  });
 });

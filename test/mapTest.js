@@ -11,6 +11,6 @@ describe('map() test:', () => {
     assert.deepEqual(map(words, word => word[Math.floor(word.length / 2)]), ['u', 't', 'o', 'j', 'o']);
   });
   it('should not modify the array given as a parameter', () => {
-    assert.deepEqual(words, ["ground", "control", "to", "major", "tom"])
+    assert.deepEqual(words, ["ground", "control", "to", "major", "tom"]);
   });
 });
